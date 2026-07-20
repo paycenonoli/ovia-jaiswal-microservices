@@ -200,7 +200,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: ojpascale/frontend:latest
+          image: ojpascale/frontendservice:latest
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -465,7 +465,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: ojpascale/loadgenerator:latest
+        image: ojpascale/loadgeneratorservice:latest
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
